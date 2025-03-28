@@ -5,7 +5,6 @@ import sqlite3
 from datetime import datetime
 import logging
 
-
 # Configuration
 API_KEY = "cvio5vpr01qijvgjk970cvio5vpr01qijvgjk97g"  # Finnhub API-Key
 OUTPUT_DIR = "./data"  # Lokaler Pfad für die Ausgabe

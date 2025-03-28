@@ -6,7 +6,6 @@ from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
 import logging
 
-
 # Configuration
 API_KEY = "cvio5vpr01qijvgjk970cvio5vpr01qijvgjk97g"  # Finnhub API-Key
 OUTPUT_DIR = "/opt/airflow/data"  # Airflow-typischer Pfad
