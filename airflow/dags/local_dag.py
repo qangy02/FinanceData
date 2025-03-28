@@ -6,7 +6,7 @@ from datetime import datetime
 import logging
 
 # Configuration
-API_KEY = "cvio5vpr01qijvgjk970cvio5vpr01qijvgjk97g"  # Finnhub API-Key
+API_KEY = ""  # Finnhub API-Key
 OUTPUT_DIR = "./data"  # Lokaler Pfad für die Ausgabe
 CSV_PATH = os.path.join(OUTPUT_DIR, "mag7_stocks.csv")
 DB_PATH = os.path.join(OUTPUT_DIR, "mag7_stocks.db")

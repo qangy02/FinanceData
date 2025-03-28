@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 import logging
 
 # Configuration
-API_KEY = "cvio5vpr01qijvgjk970cvio5vpr01qijvgjk97g"  # Finnhub API-Key
+API_KEY = ""  # Finnhub API-Key
 OUTPUT_DIR = "/opt/airflow/data"  # Airflow-typischer Pfad
 CSV_PATH = os.path.join(OUTPUT_DIR, "mag7_stocks.csv")
 MAG7_SYMBOLS = ["AAPL", "MSFT", "AMZN", "GOOGL", "META", "TSLA", "NVDA"]
