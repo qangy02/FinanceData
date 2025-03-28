@@ -1,0 +1,26 @@
+[2025-03-28T11:06:37.782+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-28T11:06:37.815+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mag7_stocks_etl.extract_task manual__2025-03-28T11:06:15.662385+00:00 [queued]>
+[2025-03-28T11:06:37.832+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mag7_stocks_etl.extract_task manual__2025-03-28T11:06:15.662385+00:00 [queued]>
+[2025-03-28T11:06:37.832+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2025-03-28T11:06:38.034+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract_task> on 2025-03-28 11:06:15.662385+00:00
+[2025-03-28T11:06:43.911+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'mag7_stocks_etl', 'extract_task', 'manual__2025-03-28T11:06:15.662385+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/finance_dag.py', '--cfg-path', '/tmp/tmp4l5t7rf9']
+[2025-03-28T11:06:43.915+0000] {standard_task_runner.py:105} INFO - Job 21: Subtask extract_task
+[2025-03-28T11:06:43.916+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=107) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-28T11:06:43.917+0000] {standard_task_runner.py:72} INFO - Started process 117 to run task
+[2025-03-28T11:06:37.840+0000] {task_command.py:467} INFO - Running <TaskInstance: mag7_stocks_etl.extract_task manual__2025-03-28T11:06:15.662385+00:00 [running]> on host 97a79d620c66
+[2025-03-28T11:06:38.264+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='mag7_stocks_etl' AIRFLOW_CTX_TASK_ID='extract_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-28T11:06:15.662385+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-28T11:06:15.662385+00:00'
+[2025-03-28T11:06:38.265+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-28T11:06:38.733+0000] {finance_dag.py:40} INFO - Fetched data for AAPL
+[2025-03-28T11:06:39.179+0000] {finance_dag.py:40} INFO - Fetched data for MSFT
+[2025-03-28T11:06:39.623+0000] {finance_dag.py:40} INFO - Fetched data for AMZN
+[2025-03-28T11:06:40.065+0000] {finance_dag.py:40} INFO - Fetched data for GOOGL
+[2025-03-28T11:06:40.238+0000] {finance_dag.py:40} INFO - Fetched data for META
+[2025-03-28T11:06:40.692+0000] {finance_dag.py:40} INFO - Fetched data for TSLA
+[2025-03-28T11:06:41.131+0000] {finance_dag.py:40} INFO - Fetched data for NVDA
+[2025-03-28T11:06:41.132+0000] {finance_dag.py:58} INFO - Erfolgreich 7 Symbole abgerufen.
+[2025-03-28T11:06:41.133+0000] {python.py:240} INFO - Done. Returned value was: [{'c': 223.85, 'd': 2.32, 'dp': 1.0473, 'h': 224.99, 'l': 220.5601, 'o': 221.39, 'pc': 221.53, 't': 1743105600, 'symbol': 'AAPL', 'timestamp': '2025-03-28T11:06:38.733371'}, {'c': 390.58, 'd': 0.61, 'dp': 0.1564, 'h': 392.24, 'l': 387.395, 'o': 390.13, 'pc': 389.97, 't': 1743105600, 'symbol': 'MSFT', 'timestamp': '2025-03-28T11:06:39.179584'}, {'c': 201.36, 'd': 0.23, 'dp': 0.1144, 'h': 203.79, 'l': 199.2821, 'o': 200.89, 'pc': 201.13, 't': 1743105600, 'symbol': 'AMZN', 'timestamp': '2025-03-28T11:06:39.623446'}, {'c': 162.24, 'd': -2.82, 'dp': -1.7085, 'h': 165.42, 'l': 162, 'o': 164.63, 'pc': 165.06, 't': 1743105600, 'symbol': 'GOOGL', 'timestamp': '2025-03-28T11:06:40.065720'}, {'c': 602.58, 'd': -8.4, 'dp': -1.3748, 'h': 614.25, 'l': 600.1, 'o': 602, 'pc': 610.98, 't': 1743105600, 'symbol': 'META', 'timestamp': '2025-03-28T11:06:40.238894'}, {'c': 273.13, 'd': 1.07, 'dp': 0.3933, 'h': 291.85, 'l': 271.8216, 'o': 272.48, 'pc': 272.06, 't': 1743105600, 'symbol': 'TSLA', 'timestamp': '2025-03-28T11:06:40.692516'}, {'c': 111.43, 'd': -2.33, 'dp': -2.0482, 'h': 114.45, 'l': 110.66, 'o': 111.35, 'pc': 113.76, 't': 1743105600, 'symbol': 'NVDA', 'timestamp': '2025-03-28T11:06:41.131725'}]
+[2025-03-28T11:06:41.378+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-28T11:06:41.379+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=mag7_stocks_etl, task_id=extract_task, run_id=manual__2025-03-28T11:06:15.662385+00:00, execution_date=20250328T110615, start_date=20250328T110637, end_date=20250328T110641
+[2025-03-28T11:06:41.741+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-28T11:06:41.790+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-28T11:06:41.963+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
