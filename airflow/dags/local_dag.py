@@ -4,10 +4,14 @@ import os
 import sqlite3
 from datetime import datetime
 import logging
+from dotenv import load_dotenv
 
-# Configuration
-API_KEY = ""  # Finnhub API-Key
-OUTPUT_DIR = "./data"  # Lokaler Pfad für die Ausgabe
+# .env Datei laden
+load_dotenv()
+
+# API-Key aus der Umgebungsvariable holen
+API_KEY = os.getenv("FINNHUB_API_KEY")  # Finnhub API-Key
+OUTPUT_DIR = "/opt/airflow/data"
 CSV_PATH = os.path.join(OUTPUT_DIR, "mag7_stocks.csv")
 DB_PATH = os.path.join(OUTPUT_DIR, "mag7_stocks.db")
 MAG7_SYMBOLS = ["AAPL", "MSFT", "AMZN", "GOOGL", "META", "TSLA", "NVDA"]

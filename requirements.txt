@@ -1,0 +1,11 @@
+requests
+pandas
+psycopg2-binary
+python-dotenv
+matplotlib
+streamlit
+prophet
+plotly
+psycopg2-binary>=2.9.5
+marshmallow<4
+numpy

@@ -1,7 +1,5 @@
 version: '3'
 
-
-
 services:
 
   sleek-airflow:
@@ -12,4 +10,3 @@ services:
       - "8080:8080"
 
     command: airflow standalone
-

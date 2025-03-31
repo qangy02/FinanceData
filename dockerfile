@@ -7,3 +7,7 @@ RUN apt-get update && \
     apt-get clean
 
 USER airflow
+
+# Installiere Python-Abhängigkeiten
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
